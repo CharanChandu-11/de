@@ -52,3 +52,13 @@ public class WordCount {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
+
+javac -classpath `hadoop classpath` WordCount.java 
+jar cf wc.jar WordCount*.class 
+echo "hello hadoop hello world" > input.txt 
+
+hdfs dfs -mkdir /input 
+hdfs dfs -put input.txt /input 
+
+hadoop jar wc.jar WordCount /input /output 
+hdfs dfs -cat /output/part-r-00000 
