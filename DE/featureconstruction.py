@@ -3,7 +3,7 @@ from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
 
 # One-Hot Encoding
 data = pd.DataFrame({'City':['Delhi','Mumbai','Bangalore','Chennai','Delhi','Mumbai']})
-encoder = OneHotEncoder()
+encoder =OneHotEncoder()
 encoded_data = encoder.fit_transform(data[['City']])
 print(encoded_data.toarray())
 

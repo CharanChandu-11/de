@@ -13,7 +13,6 @@ display(df[listcol])
 df1 = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], columns=df.columns)
 display(df1)
 combdf = pd.concat([df, df1],axis=0)
-
 df['total'] = df['newname'] + df['sepal width (cm)']
 df.isnull().sum()
 cols = df.select_dtypes(include=['int64','float64'])

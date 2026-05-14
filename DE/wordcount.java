@@ -24,7 +24,7 @@ public class WordCount {
         }
     }
 
-    // Reducer
+    // Reducer 
     public static class ReducerClass extends Reducer<Text, IntWritable, Text, IntWritable> {
         public void reduce(Text key, Iterable<IntWritable> values, Context context)
                 throws IOException, InterruptedException {
@@ -34,7 +34,7 @@ public class WordCount {
         }
     }
 
-    // Driver
+    // Driver 
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "Word Count");
